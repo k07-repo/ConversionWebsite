@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>
+      English/Metric Length Converter | Converters Online
+    </title>
+    <meta name="description" content="Convert from English to Metric Length units and back instantly.">
+    <style>
+        input {
+          display:inline-block;
+          width: 80%;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        #fields {
+          text-align: right;
+          width: 70%;
+        }
+
+        #valuetable {
+          width: 100%;
+        }
+
+        label {
+          width: 15%;
+          display: inline-block;
+          text-align: right;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="lengthutils.js"></script>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rgb-hex-int.html">RGB/Hex/Int Color</a></li>
+      <li><a href="binary-decimal-hex.html">Binary/Decimal/Hex</a></li>
+      <li><a href="unix-timestamp.html">Unix Timestamp</a></li>
+      <li><a href="binary-ascii.html">Binary to ASCII</a></li>
+      <li><a href="decimal-ascii.html">Decimal to ASCII</a></li>
+      <li><a class="active" href="english-metric-length.html">Engish/Metric Length</a></li>
+      <li><a href="english-metric-volume.html">Engish/Metric Volume</a></li>
+    </ul>
+
+    <h2 style="text-align:center">English/Metric Length Converter</h2>
+
+    <p style="text-align:left"/>
+      This converter allows for quick conversion between English (e.g. inches, feet, and miles) and Metric (e.g. centimeters, meters, kilometers) length units.<br>
+      Simply enter a value on one side and all the other boxes will fill in automatically.<br>
+      <br>
+      For safety, values display as NaN when they get too high - 14 digits, although this is well beyond any practical application. Numbers will be rounded to the seventh decimal place at most.<br>
+      <br>
+      This calculator is usable for reference, approximations, and everyday use, however for times when precise measurements are important (e.g. scientific usage) it is highly recommended that you also calculate the values yourself.
+    </p>
+
+
+    <table id="valuetable">
+      <tr>
+        <td style="text-align:center">
+          English
+        </td>
+        <td style="text-align:center">
+          Metric
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <p><label>Inches: </label>&nbsp;<input type="text" id="inches" oninput="onChanged('inches');"><br></p>
+            <p><label>Feet: </label>&nbsp;<input type="text" id="feet" oninput="onChanged('feet');"><br></p>
+            <p><label>Yards: </label>&nbsp;<input type="text" id="yards" oninput="onChanged('yards');"><br></p>
+            <p><label>Miles: </label>&nbsp;<input type="text" id="miles" oninput="onChanged('miles');"></p>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p><label>Millimeters: </label>&nbsp;<input type="text" id="millimeters" oninput="onChanged('millimeters');"><br></p>
+            <p><label>Centimeters: </label>&nbsp;<input type="text" id="centimeters" oninput="onChanged('centimeters');"><br></p>
+            <p><label>Meters: </label>&nbsp;<input type="text" id="meters" oninput="onChanged('meters');"><br></p>
+            <p><label>Kilometers: </label>&nbsp;<input type="text" id="kilometers" oninput="onChanged('kilometers');"></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
+
+    <br>
+    <div id="validation"></div>
+  </body>
+  <br>
+  <!-- ads here -->
+  <br>
+  <div align="center">
+    © 2020 Converters Online. | <a href="privacy.html">Privacy Policy</a>
+  </div>
+</html>

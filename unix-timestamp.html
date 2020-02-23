@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Unix Timestamp Converter | Converters Online</title>
+    <meta name="description" content="Convert from Unix Timestamp to UTC and back instantly.">
+    <style>
+        #fields {
+          text-align: right;
+        }
+
+        #hours {
+          width: 3%;
+        }
+
+        #minutes {
+          width: 3%;
+        }
+
+        #seconds {
+          width: 3%;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+       $( function() {
+         $( "#datepicker" ).datepicker();
+       });
+    </script>
+    <script type="text/javascript" src="unixutils.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rgb-hex-int.html">RGB/Hex/Int Color</a></li>
+      <li><a href="binary-decimal-hex.html">Binary/Decimal/Hex</a></li>
+      <li><a class="active" href="unix-timestamp.html">Unix Timestamp</a></li>
+      <li><a href="binary-ascii.html">Binary to ASCII</a></li>
+      <li><a href="decimal-ascii.html">Decimal to ASCII</a></li>
+      <li><a href="english-metric-length.html">Engish/Metric Length</a></li>
+      <li><a href="english-metric-volume.html">Engish/Metric Volume</a></li>
+    </ul>
+
+    <h2 style="text-align:center">Unix Timestamp Converter</h2>
+
+    <p style="text-align:left"/>
+      Unix Timestamps are a method of measuring time that represents the number of seconds elapsed since 00:00:00 on January 1, 1970. They are commonly used in operating systems (such as its namesake, Unix) and in other technical areas.
+    </p>
+    <p><label for="unixBox">Unix Timestamp: </label><input id="unixBox" type="text" oninput="onUnixBoxChanged();"/></p>
+
+    <table>
+      <tr>
+        <td style="text-align:right">
+          UTC/GMT Time:
+        </td>
+        <td>
+          <div id="utctime"></div>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:right">
+          Local Time:
+        </td>
+        <td>
+          <div id="localtime"></div>
+        </td>
+      </tr>
+    </table>
+
+    <div id="validation"></div>
+    <br>
+    <p style="text-align:left"/>
+       The following converter allows you to convert from a readable UTC/GMT time format into a Unix timestamp.<br>
+       Other timezones are currently not supported.
+    </p>
+
+    <p><label for="datepicker">Date: </label><input id="datepicker" type="text" oninput="onTimeChanged();"/></p>
+    <p>
+      <label for="hours">HH: </label><input id="hours" type="text" maxlength="2" oninput="onTimeChanged();"/>
+      <label for="minutes">MM: </label><input id="minutes" type="text" maxlength="2" oninput="onTimeChanged();"/>
+      <label for="seconds">SS: </label><input id="seconds" type="text" maxlength="2" oninput="onTimeChanged();"/>
+      GMT
+    </p>
+
+    <table>
+      <tr>
+        <td style="text-align:right">
+          You entered:
+        </td>
+        <td>
+          <div id="userdate"></div>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:right">
+          Unix timestamp:
+        </td>
+        <td>
+          <div id="timestamp"></div>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div align="center">
+      © 2020 Converters Online. | <a href="privacy.html">Privacy Policy</a>
+    </div>
+</html>

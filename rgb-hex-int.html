@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>RGB to Hex Converter | Converters Online</title>
+    <meta name="description" content="Convert colors from RGB to Hex and back instantly.">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="colorutils.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="rgb-hex-int.html">RGB/Hex/Int Color</a></li>
+      <li><a href="binary-decimal-hex.html">Binary/Decimal/Hex</a></li>
+      <li><a href="unix-timestamp.html">Unix Timestamp</a></li>
+      <li><a href="binary-ascii.html">Binary to ASCII</a></li>
+      <li><a href="decimal-ascii.html">Decimal to ASCII</a></li>
+      <li><a href="english-metric-length.html">Engish/Metric Length</a></li>
+      <li><a href="english-metric-volume.html">Engish/Metric Volume</a></li>
+    </ul>
+
+    <h2 style="text-align:center">RGB, Hex, Integer Color Converter</h2>
+
+    <p style="text-align:left"/>
+      Colors can be represented in multiple different ways, all of which are identical at their core. Provided here are three of the most common.<br><br>
+      -RGB: "red", "green", "blue" values; represents the portion of red/green/blue inside the color. Essentially the root of the other color notations.<br>
+      -Hex: Presented as a six digit hexadecimal (base 16) number. The first two digits represent the RGB value for red, and so on.<br>
+      -Integer: An ordinary integer that uniquely represents any possible RGB value. Calculated as 65536r + 256g + b.<br><br>
+      The provided calculator provides easy conversion between the three. Simply entering any type of value (RGB, Hexadecimal, Integer) will cause the others to fill in automatically, and the color panel to update instantaneously to match.
+    </p>
+    <table id="valuetable" style="margin-left:auto;margin-right:auto;">
+      <tr>
+        <td>
+          <div id="fields" style="text-align:right;"/>
+            <p><label for="redBox">Red: </label><input id="redBox" type="text" value="255" oninput="onColorValueChanged();"/></p>
+            <p><label for="greenBox">Green: </green><input id="greenBox" type="text" value="255" oninput="onColorValueChanged();"/></p>
+            <p><label for="blueBox">Blue: </blue><input id="blueBox" type="text" value="255" oninput="onColorValueChanged();"/></p>
+            <br/>
+            <p>Hexadecimal: <input id="hexBox" type="text" value="FFFFFF" oninput="onHexChanged();"/></p>
+            <p>Integer: <input id="intBox" type="text" value="16777215" oninput="onIntChanged();"/></p>
+          </div>
+        </td>
+        <td>
+          <div id="colorpanel">
+            <svg width="400" height="300">
+              <rect id="colorPanel" x="50" y="50" width="300" height="200" style="fill:white;stroke:black;stroke-width:3" />
+              <text id="errorText" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+            </svg>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div id="validation"></div>
+  </body>
+  <br>
+  <div align="center">
+    © 2020 Converters Online. | <a href="privacy.html">Privacy Policy</a>
+  </div>
+</html>

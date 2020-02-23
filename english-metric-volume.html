@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>
+      English/Metric Volume Converter | Converters Online
+    </title>
+    <meta name="description" content="Convert from English to Metric Volume units and back instantly.">
+    <style>
+        input {
+          display:inline-block;
+          width: 80%;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        #fields {
+          text-align: right;
+          width: 70%;
+        }
+
+        #valuetable {
+          width: 100%;
+        }
+
+        label {
+          width: 15%;
+          display: inline-block;
+          text-align: right;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="volumeutils.js"></script>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rgb-hex-int.html">RGB/Hex/Int Color</a></li>
+      <li><a href="binary-decimal-hex.html">Binary/Decimal/Hex</a></li>
+      <li><a href="unix-timestamp.html">Unix Timestamp</a></li>
+      <li><a href="binary-ascii.html">Binary to ASCII</a></li>
+      <li><a href="decimal-ascii.html">Decimal to ASCII</a></li>
+      <li><a href="english-metric-length.html">Engish/Metric Length</a></li>
+      <li><a class="active" href="english-metric-volume.html">Engish/Metric Volume</a></li>
+    </ul>
+
+    <h2 style="text-align:center">English/Metric Volume Converter</h2>
+
+    <p style="text-align:left"/>
+      This converter allows for quick conversion between English (e.g. cups, pints, and gallons) and Metric (e.g. milliliters, liters, kiloliters) length units.<br>
+      Simply enter a value on one side and all the other boxes will fill in automatically.<br>
+      <br>
+      For safety, values display as NaN when they get too high - 14 digits, although this is well beyond any practical application. Numbers will be rounded to the seventh decimal place at most.<br>
+      <br>
+      This calculator is usable for reference, approximations, and everyday use, however for times when precise measurements are important (e.g. scientific usage) it is highly recommended that you also calculate the values yourself.
+    </p>
+
+    <table id="valuetable">
+      <tr>
+        <td style="text-align:center">
+          English
+        </td>
+        <td style="text-align:center">
+          Metric
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <p><label>Fluid oz: </label>&nbsp;<input type="text" id="ounces" oninput="onChanged('ounces');"><br></p>
+            <p><label>Cups: </label>&nbsp;<input type="text" id="cups" oninput="onChanged('cups');"><br></p>
+            <p><label>Pints: </label>&nbsp;<input type="text" id="pints" oninput="onChanged('pints');"><br></p>
+            <p><label>Quarts: </label>&nbsp;<input type="text" id="quarts" oninput="onChanged('quarts');"></p>
+            <p><label>Gallons: </label>&nbsp;<input type="text" id="gallons" oninput="onChanged('gallons');"></p>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p><label>Milliliters: </label>&nbsp;<input type="text" id="milliliters" oninput="onChanged('milliliters');"><br></p>
+            <p><label>Liters: </label>&nbsp;<input type="text" id="liters" oninput="onChanged('liters');"><br></p>
+            <p><label>Kiloliters: </label>&nbsp;<input type="text" id="kiloliters" oninput="onChanged('kiloliters');"></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div id="validation"></div>
+  </body>
+  <br>
+  <!-- ads here -->
+  <br>
+  <div align="center">
+    © 2020 Converters Online. | <a href="privacy.html">Privacy Policy</a>
+  </div>
+</html>

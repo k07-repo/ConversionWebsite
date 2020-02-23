@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>
+      Binary to Decimal to Hex Converter | Converters Online
+    </title>
+    <meta name="description" content="Convert from Binary to Decimal and Hex and back instantly.">
+    <style>
+        #fields {
+          text-align: right;
+          width: 70%;
+        }
+
+        #valuetable {
+          width: 100%;
+        }
+
+        .label {
+          width: 10%;
+          text-align: right;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="binaryutils.js"></script>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rgb-hex-int.html">RGB/Hex/Int Color</a></li>
+      <li><a class="active" href="binary-decimal-hex.html">Binary/Decimal/Hex</a></li>
+      <li><a href="unix-timestamp.html">Unix Timestamp</a></li>
+      <li><a href="binary-ascii.html">Binary to ASCII</a></li>
+      <li><a href="decimal-ascii.html">Decimal to ASCII</a></li>
+      <li><a href="english-metric-length.html">Engish/Metric Length</a></li>
+      <li><a href="english-metric-volume.html">Engish/Metric Volume</a></li>
+    </ul>
+
+    <h2 style="text-align:center">Binary, Decimal, Hexadecimal Number Converter</h2>
+
+    <p style="text-align:left"/>
+      Number can be represented using several different bases. The most common bases used today are decimal (base-10), binary (base-2), and hexadecimal (base-6).
+      A base is the main counting unit. To be more specific, the nth digit from the right represents (base value)^(n - 1). So in base-10, the 3rd digit represents 10^(3 - 1) = 10^2 = 100, so the third digit is the hundreds place.
+      <br><br>
+      -Decimal numbers are the ones we use in everyday life.<br>
+      -Binary numbers use only 0s and 1s and are used in computing applications.<br>
+      -Hexadecimal numbers use sixteen digits (10-15 are represented by A-F). These are also used in computing applications.<br>
+      <br>
+      The below converter can convert between all three instantaneously. For safety, only positive integers up to 9007199254740991 (2^53 - 1) in decimal are accepted.
+    </p>
+
+    <table id="valuetable">
+      <tr>
+        <td class="label">
+          Binary:
+        </td>
+        <td>
+          <input id="binaryBox" type="text" value="0" oninput="onBinaryChanged();"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">
+          Decimal:
+        </td>
+        <td>
+          <input id="decimalBox" type="text" value="0" oninput="onDecimalChanged();"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">
+          Hexadecimal:
+        </td>
+        <td>
+          <input id="hexBox" type="text" value="0" oninput="onHexChanged();"/>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div id="validation"></div>
+  </body>
+  <br>
+  <!-- ads here -->
+  <br>
+  <div align="center">
+    © 2020 Converters Online. | <a href="privacy.html">Privacy Policy</a>
+  </div>
+</html>
